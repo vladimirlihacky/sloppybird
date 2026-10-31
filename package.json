@@ -10,7 +10,9 @@
     "typescript": "^5"
   },
   "scripts": {
-    "build": "bun i && bun build index.html --outdir=deploy"
+    "deploy:game": "bun run clear && bun build src/sloppybird/index.html --outdir=deploy",
+    "start:bot": "bun src/telegram/bot.ts",
+    "clear": "rm -rf deploy"
   },
   "dependencies": {
     "grammy": "^1.46.0"
