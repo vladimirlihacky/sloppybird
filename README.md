@@ -1,15 +1,39 @@
 # sloppybird
 
-To install dependencies:
+## Структура проекта:
 
-```bash
-bun install
+```
+src
+    sloppybird # сама игра
+    telegram   # конфиг бота, все что связано с telegram интеграцией
+deploy # Игра собранная в статику для хостинга на Github Pages 
 ```
 
-To run:
+## Quickstart
 
-```bash
-bun run index.ts
+1. Заполнить .env своими данными
+
+.env
+
+```
+TELEGRAM_BOT_TOKEN=your_token
+TELEGRAM_GAME_URL=your_game_url
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+2. Собрать игру и задеплоить
+
+```bash
+bun run deploy:game
+git push
+```
+
+3. Установить зависимости и запустить бота
+
+```bash
+bun install 
+bun run start:bot
+```
+
+## P.S.
+
+Bun в данном случае полностью совместим с Node - все что нужно для запуска на NodeJS - собирать приложения с помощью tsc
