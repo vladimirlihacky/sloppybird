@@ -1,5 +1,8 @@
 import { Game } from './Game';
 
+window.Telegram.WebApp.ready();
+window.Telegram.WebApp.expand();
+
 const canvas = document.getElementById('game');
 
 if (!(canvas instanceof HTMLCanvasElement)) {

@@ -455,6 +455,8 @@ class Game {
 }
 
 // src/sloppybird/main.ts
+window.Telegram.WebApp.ready();
+window.Telegram.WebApp.expand();
 var canvas = document.getElementById("game");
 if (!(canvas instanceof HTMLCanvasElement)) {
   throw new Error("Canvas element #game not found");
